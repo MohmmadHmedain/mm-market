@@ -1,0 +1,137 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+   
+   
+}
+
+header {
+    background-color: #030871;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    font-family:'Times New Roman', Times, serif;
+
+}
+
+
+nav {
+    background-color:white;
+}
+
+    nav ul {
+        list-style-type:none;
+        margin: 0;
+        padding: 1px;
+        overflow:hidden;
+        padding-left:400px;
+    }
+
+    nav li {
+        float:left;
+    }
+
+    nav a {
+        display: block;
+        color: black;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration:none;
+    }
+
+        nav a:hover {
+            background-color:#504f4f;
+        }
+        a:hover{
+            text-decoration:none;
+            
+        }
+
+main {
+    padding: 20px;
+}
+
+section  {
+    margin-bottom: 20px;
+
+}
+
+div.m1 {
+    position:absolute;
+    left:30px;
+    
+} 
+
+.call{
+    padding-left:20px;
+    justify-content:center;
+    font-weight:bolder;
+margin:40px;
+border:4px solid #030871;
+font-size:x-large;
+text-align:center;
+color:aliceblue;
+}
+
+footer p {
+
+    background-color: #030871;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    font-family: 'Times New Roman', Times, serif;
+}
+.box {
+    position: relative; /* نسبةً له ::after و ::before أضفنا له هذه الخاصية حتى نتمكن من عرض الحدود بواسطة */
+    width:710px; /* هنا حددنا أن عرضه 300 بكسل */
+    height: 250px; /* هنا حددنا أن طوله 360 بكسل */
+    display: flex; /* flex هنا قمنا بتحديد أن أي شيء نضعه فيه سيتم ترتيبه بأسلوب و خصائص */
+    justify-content: center; /* هنا حددنا أن أي عنصر نضعه بداخله سيوضع في وسطه أفقياً */
+   margin: 0 auto 0 auto; /* هنا حددنا أن أي عنصر نضعه بداخله سيوضع في وسطه عمودياً */
+    overflow: hidden; /* أضفنا هذه الخاصية لإخفاء أي جزء زائد موضوع داخل الوسم حتى لا يظهر خارج حدوده */
+    border-radius: 20px; /* هنا حددنا أن حدوده مائلة بنسبة 20 بكسل حتى لا تظهر بشكل حواف حادة */
+}
+
+    .box::before { /* هنا أضفنا عنصر في بداية الوسم و قبل الصورة و هذا سيكون بمثابة الخط الذي يتحرك */
+        position: absolute; /* هنا قمنا بتحديد أنه سيتم وضعه في الوسط تماماً كالعنصر الأب له */
+        content: " "; /* هنا قمنا بتحديد أن محتواه سيكون فراغ لأننا مجبرين على تحديد ما سيحتويه */
+        width: 1200pt; /* هنا قمنا بتحديد أن عرضه 150 بكسل لأن هذا العرض يكفي ليظهر الخط على كامل المربع الذي سيتم عرضه فيه */
+        height: 140pt; /* هنا قمنا بتحديد أن طوله 140 بالمئة لأن هذا العرض يكفي ليظهر الخط على كامل المربع الذي سيتم عرضه فيه */
+        background: linear-gradient(#f8f8f8, rgb(58, 0, 248)); /* هنا حددنا أن لونه سيكون مزيج بين الأبيض و الأزرق */
+        animation: animate 4s linear infinite; /* animation هنا حددنا أنه سيطبق المؤثرات التي حددناها بإسم */
+    }
+    /* باختصار, هنا أضفنا مربع أسود فوق المربع الذي يدور و قربناه للداخل بنسبة 5 بكسل حتى تظل حدوده التي سيظهر المربع و هو يدور عليها ظاهرة و الباقي مخفي */
+    .box::after {
+        content: ""; /* هنا قمنا بتحديد أن محتواه سيكون فراغ لأننا مجبرين على تحديد ما سيحتويه */
+        position: absolute; /* هنا قمنا بتحديد أنه سيتم وضعه في الوسط تماماً كالعنصر الأب له */
+        inset: 5px; /* هنا قمنا بإبعاده عن حدود العنصر الأب له بمقدار 5 بكسل من كل الجهات */
+        background-color:white; /* هنا جعلنا لون خلفيته أسود مثل خلفية الصفحة حتى يخفي الجزء الذي لا نحتاجه من المربع الموضوع خلفه */
+        border-radius: 20px; /* هنا حددنا أن حدوده مائلة بنسبة 20 بكسل حتى لا يظهر المربع الذي سيدور خلفه مقطوع عند الزوايا */
+        backdrop-filter:blur(20%);
+    }
+    .box p{
+        color:black;
+        text-align:center;
+        z-index:2;
+        font-size:large;
+        font-weight:bolder;
+    }
+/* كإسم animation هنا قمنا بتعريف أنيمشين أعطيناه */
+/* العنصر الذي يقوم باستدعاء هذا الأنيمشين يتم تدويره في مكانه فقط */
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+a{
+    text-decoration: none;
+}
+a:hover{
+    column-gap: 10px;
+}

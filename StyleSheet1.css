@@ -1,0 +1,43 @@
+﻿header {
+    color: red;
+    background-color: white;
+    padding: 0px;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+nav{
+    background-color:white;
+   
+
+}
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+       
+       padding-left:0px;
+    }
+        nav li {
+           
+            float:left;
+            }
+        a:hover{
+            overflow:hidden;
+            text-decoration:underline}
+
+
+        section{
+            padding:30px;
+        }
+        footer {
+            background-color:black;
+            color:white;
+            text-align: center;
+            padding: 10px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+   
